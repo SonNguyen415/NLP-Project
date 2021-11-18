@@ -1,11 +1,15 @@
 public class Sentence {
 
     // needs to be in a constructor
-
+    
     public String text;
     public String author;
     public String timestamp;
 
+
+    public Sentence(String text, String author, String timestamp){
+
+    }
 
     public String getText() {
         return text;
@@ -27,7 +31,7 @@ public class Sentence {
     }
 
     public String toString(){
-        return author +" "+ text+" "+ timestamp;
+        return "author:" + author +" "+ "text:"+ text+" "+ "timestamp:"+ timestamp;
     }
     
 }
