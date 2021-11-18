@@ -2,13 +2,15 @@ public class Sentence {
 
     // needs to be in a constructor
     
-    public String text;
-    public String author;
-    public String timestamp;
+    private String text;
+    private String author;
+    private String timestamp;
 
 
     public Sentence(String text, String author, String timestamp){
-
+        this.text = text;
+        this.author = author;
+        this.timestamp = timestamp;
     }
 
     public String getText() {
