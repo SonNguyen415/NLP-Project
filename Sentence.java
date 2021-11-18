@@ -35,5 +35,11 @@ public class Sentence {
     public String toString(){
         return "author:" + author +" "+ "text:"+ text+" "+ "timestamp:"+ timestamp;
     }
+
+    public Sentence convertLine(String line){
+        String [] part1 = line.split(",", 4);
+        String [] part2 = line.split(",", 5)
+        String [] part3 = line.split(",", )
+    }
     
 }
