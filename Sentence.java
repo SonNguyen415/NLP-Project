@@ -5,7 +5,7 @@ public class Sentence {
     private String text;
     private String author;
     private String timestamp;
-
+    
 
     public Sentence(String text, String author, String timestamp){
         this.text = text;
@@ -34,8 +34,11 @@ public class Sentence {
 
     public String toString(){
         return "author:" + author +" "+ "text:"+ text+" "+ "timestamp:"+ timestamp;
-    }
 
+        
+    }
+     
+    
     public static Sentence convertLine(String line){
         // we need to remove the peroid and process the date.
         // we can use the replaceall() api to remomve the peroids.
@@ -63,7 +66,7 @@ public class Sentence {
 
         return var_name;
         
-
+        
     }
     
 }
