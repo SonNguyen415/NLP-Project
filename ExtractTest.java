@@ -2,7 +2,7 @@ public class ExtractTest {
     
 if (test2 == true){
     completed = true;
-    try{completed = testChecker("main1", "test2", main1("Mon", "May", "11 03:17:40 UTC 2009"), "Mon May 11 03:17:40 UTC 2009",  "May","Mon","2009") && completed;
+    try{completed = testChecker("main1", "test2", main1("Mon May 11 03:17:40 UTC 2009"), "Mon May 11 03:17:40 UTC 2009",  "May 11 2009") && completed;
 }catch (Exception e){System.out.println("Oops! Check your main1, test1, on inputs Mon May 11 03:17:40 UTC 2009 -- it raised an exception.");e.printStackTrace();}
 
 }
@@ -25,5 +25,6 @@ if (test2 == true){
         else
           System.out.println("Check the errors above for Problem 1, and try again!");
       }else System.out.println("skipping test1");
-      */
+      
 }
+*/

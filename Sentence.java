@@ -36,13 +36,19 @@ public class Sentence {
         return "author:" + author +" "+ "text:"+ text+" "+ "timestamp:"+ timestamp;
     }
 
-    public Sentence convertLine(String line){
+    public static Sentence convertLine(String line){
         String [] part1 = line.split(",", 4);
         String [] part2 = line.split(",", 5);
         String [] part3 = line.split(",", 2);
-        author = part1[4];
-        text = part2[5];
-        timestamp = part3[2];
+
+        String a = part1[4];
+        String t = part2[5];
+        String stamp = part3[2];
+
+        Sentence var_name = new Sentence(t, a, stamp);
+
+        return var_name;
+        
 
     }
     
