@@ -33,9 +33,7 @@ public class Sentence {
     }
 
     public String toString(){
-        return "author:" + author +" "+ "text:"+ text+" "+ "timestamp:"+ timestamp;
-
-        
+        return "author: " + author +" "+ "text: "+ text+" "+ "timestamp: "+ timestamp;
     }
      
     
@@ -43,30 +41,29 @@ public class Sentence {
         // we need to remove the peroid and process the date.
         // we can use the replaceall() api to remomve the peroids.
 
-        
-
         String[] strArray = line.split("\",\"");
 
-        String a = strArray[strArray.length - 2];
-        String t = strArray[strArray.length - 1];
-        t = t.replaceAll(",", "");
-        t = t.replaceAll("\\.", "");
-        t = t.replaceAll("'", "");
-        t = t.replaceAll(":", "");
-        t = t.replaceAll("@", "");
-        t = t.replaceAll("\\)", "");
-        t = t.replaceAll("\"", "");
+        // remove all punctuation
+        String author = strArray[strArray.length - 2];
+        String text = strArray[strArray.length - 1];
+        text = text.replaceAll(",", "");
+        text = text.replaceAll("\\.", "");
+        text = text.replaceAll("'", "");
+        text = text.replaceAll(":", "");
+        text = text.replaceAll("@", "");
+        text = text.replaceAll("\\)", "");
+        text = text.replaceAll("\"", "");
 
+        // process the date
         String stamp = strArray[2];
         String [] sArray = stamp.split(" ");
         stamp = sArray[1] +" "+ sArray[2] +" "+sArray[sArray.length-1];
     
-        Sentence var_name = new Sentence(t, a, stamp);
-        System.out.println(var_name.toString());
+        // create new object
+        Sentence newSentence = new Sentence(text, author, stamp);
 
-        return var_name;
-        
-        
+        return newSentence;
+
     }
     
 }
