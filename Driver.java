@@ -1,7 +1,11 @@
 import java.util.*;
 import java.io.*;
 
+
+
 public class Driver{
+
+    static ArrayList<Sentence> sentenceList = new ArrayList<Sentence>();
     
 
     public static String[] removeQuotation(String[] strArray) {
@@ -16,6 +20,14 @@ public class Driver{
         }
         return strArray;
     }
+
+
+    public static String dateFormat(String date) {
+        String[] myDate = date.split(" ");
+        date = myDate[1] + " " + myDate[2] + " " + myDate[myDate.length-1];
+        return date;
+    }
+
     public static void main(String[] args) {
 
 
@@ -26,7 +38,10 @@ public class Driver{
                 String myLine = scanner.nextLine();
                 String[] strArray = myLine.split("\",\"");
                 removeQuotation(strArray);
-                System.out.println(Arrays.toString(strArray));
+                String date = strArray[2];
+                date = dateFormat(date);
+                Sentence newSentence = new Sentence(strArray[5], strArray[4], date);
+                sentenceList.add(newSentence);
             }
         } catch(FileNotFoundException e) {
             System.out.println("File not found");
