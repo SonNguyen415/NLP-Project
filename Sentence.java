@@ -37,15 +37,14 @@ public class Sentence {
     }
 
     public static Sentence convertLine(String line){
-        String [] part1 = line.split(",", 4);
-        String [] part2 = line.split(",", 5);
-        String [] part3 = line.split(",", 2);
+        String[] strArray = line.split("\",\"");
 
-        String a = part1[4];
-        String t = part2[5];
-        String stamp = part3[2];
-
+        String a = strArray[4];
+        String t = strArray[5];
+        String stamp = strArray[2];
+       
         Sentence var_name = new Sentence(t, a, stamp);
+        System.out.println(var_name.toString());
 
         return var_name;
         

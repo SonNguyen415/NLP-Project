@@ -30,17 +30,17 @@ public class Driver{
 
     public static void main(String[] args) {
 
-
+        
 
         // Scanner and try except courtesy of Baeldung and W3School
         try (Scanner scanner = new Scanner(new File("testdata.csv"));) {
             while (scanner.hasNextLine()) {
                 String myLine = scanner.nextLine();
-                String[] strArray = myLine.split("\",\"");
-                removeQuotation(strArray);
-                String date = strArray[2];
-                date = dateFormat(date);
-                Sentence newSentence = new Sentence(strArray[5], strArray[4], date);
+                // String[] strArray = myLine.split("\",\"");
+                // removeQuotation(strArray);
+                // String date = strArray[2];
+                // date = dateFormat(date);
+                Sentence newSentence = Sentence.convertLine(myLine);
                 sentenceList.add(newSentence);
             }
         } catch(FileNotFoundException e) {
