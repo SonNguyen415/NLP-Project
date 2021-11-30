@@ -1,4 +1,5 @@
 public class ExtractTest {
+<<<<<<< Updated upstream
 
   public static void testChecker() {
     
@@ -17,8 +18,17 @@ public class ExtractTest {
   //   }
   // }
   
+=======
 
+    public static void main(String[] args){
+>>>>>>> Stashed changes
 
+    String testinput = "\"4\",\"7\",\"Mon May 11 03:21:41 UTC 2009\",\"kindle2\",\"yamarama\",\"@mikefish  Fair, enough. But i have the Kindle2 and I think it's perfect  :)\"";
+    String result = "mikefish  Fair enough But i have the Kindle2 and I think its perfect  ";
+    Sentence s = Sentence.convertLine(testinput);
+    System.out.println(s.getText().equals(result));
+
+<<<<<<< Updated upstream
 // possible example
     // Problem 1 test cases
     /*if (test1 == true){
@@ -38,3 +48,8 @@ public class ExtractTest {
       }else System.out.println("skipping test1");
       */
 }
+=======
+    }
+    
+}
+>>>>>>> Stashed changes
