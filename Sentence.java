@@ -37,12 +37,27 @@ public class Sentence {
     }
 
     public static Sentence convertLine(String line){
+        // we need to remove the peroid and process the date.
+        // we can use the replaceall() api to remomve the peroids.
+
+        
+
         String[] strArray = line.split("\",\"");
 
-        String a = strArray[4];
-        String t = strArray[5];
+        String a = strArray[strArray.length - 2];
+        String t = strArray[strArray.length - 1];
+        t = t.replaceAll(",", "");
+        t = t.replaceAll("\\.", "");
+        t = t.replaceAll("'", "");
+        t = t.replaceAll(":", "");
+        t = t.replaceAll("@", "");
+        t = t.replaceAll("\\)", "");
+        t = t.replaceAll("\"", "");
+
         String stamp = strArray[2];
-       
+        String [] sArray = stamp.split(" ");
+        stamp = sArray[1] +" "+ sArray[2] +" "+sArray[sArray.length-1];
+    
         Sentence var_name = new Sentence(t, a, stamp);
         System.out.println(var_name.toString());
 
