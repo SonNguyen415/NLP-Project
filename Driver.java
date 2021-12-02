@@ -12,6 +12,7 @@ public class Driver{
         
 
         // Scanner and try except courtesy of Baeldung and W3School
+        // read through the csv file and add new sentences to an array list 
         try (Scanner scanner = new Scanner(new File("testdata.csv"));) {
             while (scanner.hasNextLine()) {
                 String myLine = scanner.nextLine();
