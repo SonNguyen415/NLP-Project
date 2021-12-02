@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
-import java.util.*;
->>>>>>> 3cb02104edda21e276c2684cf79eea05b43bda69
+import java.util.ArrayList;
 
 public class Sentence {
 
