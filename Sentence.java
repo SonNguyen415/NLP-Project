@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Sentence {
 
     // needs to be in a constructor
@@ -36,6 +38,14 @@ public class Sentence {
         return "author: " + author +" "+ "text: "+ text+" "+ "timestamp: "+ timestamp;
     }
      
+    public ArrayList<String> splitSentence() {
+        ArrayList<String> wordList = new ArrayList<String>();
+        String[] wordArray=  this.text.split(" ");
+        for(int i = 0; i < wordArray.length; i++) {
+            wordList.add(wordArray[i]);
+        }
+        return wordList;
+    }
     
     public static Sentence convertLine(String line){
         // we need to remove the peroid and process the date.
