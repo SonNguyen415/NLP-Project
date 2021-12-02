@@ -1,6 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class Sentence {
+
 
     // needs to be in a constructor
     
@@ -106,5 +107,7 @@ public class Sentence {
         return newSentence;
 
     }
+
+   
     
 }
