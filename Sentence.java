@@ -64,7 +64,7 @@ public class Sentence {
             boolean isStopWord = false;
             String word = wordArray[i];
             for(int j = 0; j < stopwords.length; j++) {
-                if(word == stopwords[j]) {
+                if(word.equals(stopwords[j])) {
                     isStopWord = true;
                     break;
                 }
